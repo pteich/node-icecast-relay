@@ -1,0 +1,8 @@
+machine:
+  timezone:
+    Europe/Berlin
+
+test:
+  override:
+    - npm outdated --depth 0
+    - npm run lint
