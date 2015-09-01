@@ -8,7 +8,7 @@ let clients = []
 
 let decoder = lame.Decoder()
 // Decoder receives format data before any data
-decoder.on('format', (format) => {
+decoder.on("format", (format) => {
 
     let encoder = new lame.Encoder({
         // input
@@ -22,7 +22,7 @@ decoder.on('format', (format) => {
 
     encoder.on("data", (data) => {
         sendData(data)
-    });
+    })
 
     decoder.pipe(encoder)
 })
@@ -31,12 +31,12 @@ decoder.on('format', (format) => {
 icecast.get(config.icecast_url, (res) => {
 
     // receiving data from Icecast event
-    res.on('data', (data) => {
+    res.on("data", (data) => {
         decoder.write(data)
     })
 
     // changing metadata event
-    res.on('metadata', (metadata) => {
+    res.on("metadata", (metadata) => {
         let track = icecast.parse(metadata).StreamTitle
         console.log(track)
     })
@@ -51,9 +51,9 @@ let server = http.createServer((req, res) => {
     })
 
     // Add the response to the clients array to receive streaming
-    clients.push(res);
-    console.log('Client connected -> streaming');
-});
+    clients.push(res)
+    console.log("Client connected -> streaming")
+})
 
 function sendData(data){
     clients.forEach((client) => {
@@ -61,5 +61,5 @@ function sendData(data){
     })
 }
 
-server.listen("8000", "127.0.0.1");
-console.log("Server running at http://127.0.0.1:8000");
+server.listen("8000", "127.0.0.1")
+console.log("Server running at http://127.0.0.1:8000")
