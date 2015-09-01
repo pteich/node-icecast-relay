@@ -52,21 +52,40 @@ let server = http.createServer((req, res) => {
     })
 
     // Add the response to the clients array to receive streaming
+    res.connection.on("finish", () => {
+        removeClient(res)
+    })
+    res.connection.on("error", () => {
+        removeClient(res)
+    })
+    res.connection.on("timeout", () => {
+        removeClient(res)
+    })
     clients.push(res)
     console.log("Client connected -> streaming")
 })
 
-function sendData(data){
+function sendData(data) {
+
     clients.forEach((client) => {
-        client.write(data)
+        if (client) {
+            client.write(data)
+        }
     })
 
-    if (config.export.file) {
-        fs.appendFile(config.file, data, (err) => {
+    if (config.export.file != false) {
+        fs.appendFile(config.export.file, data, (err) => {
             data = null // set data to null to prevent memory leaks
             if (err) throw err
         })
     }
+}
+
+function removeClient(res) {
+    clients = clients.filter((client) => {
+        if (client !== res) return client
+    })
+    console.log("Client disconnected")
 }
 
 server.listen(config.server.port, config.server.ip)
