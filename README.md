@@ -5,6 +5,20 @@ The incoming audio data is piped through Lame so you can transcode it if needed.
 
 You can connect to the output of this script (default http://localhost:8000) with any music player capable of streaming data or any web browser that can play `audio/mp3` files.
 
+This script uses ES2015/ES6 together with (Babel)[https://babeljs.io]. 
+
+## Installation
+
+You need a installed and recent version of NodeJS and npm. To install all dependencies run:
+`npm install`
+
+## Usage
+
+To start this proxy server run:
+`npm run start`
+
+After that connect to `http://localhost:8000` with VLC or simply any modern web browser.
+
 ## Config
 
 There is one simple config file in `config/config.json` that should be pretty self explaining.
