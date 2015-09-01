@@ -5,7 +5,7 @@ The incoming audio data is piped through Lame so you can transcode it if needed.
 
 You can connect to the output of this script (default http://localhost:8000) with any music player capable of streaming data or any web browser that can play `audio/mp3` files.
 
-This script uses ES2015/ES6 together with (Babel)[https://babeljs.io]. 
+This script uses ES2015/ES6 together with Babel (https://babeljs.io). 
 
 ## Installation
 
