@@ -1,7 +1,16 @@
 {
-  "icecast_url": "http://stream-sd.radioparadise.com:9000/mp3-192",
+  "input": {
+    "url": "http://stream-sd.radioparadise.com:9000/mp3-192"
+  },
   "output": {
     "bit_rate": 128,
     "sample_rate": 44100
+  },
+  "server": {
+    "port": 8000,
+    "ip": "127.0.0.1"
+  },
+  "export": {
+    "file": "output.mp3"
   }
 }

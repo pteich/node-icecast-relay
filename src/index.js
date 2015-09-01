@@ -1,6 +1,7 @@
 import http from "http"
 import icecast from "icy"
 import lame from "lame"
+import fs from "fs"
 
 import config from "../config/config.json"
 
@@ -28,7 +29,7 @@ decoder.on("format", (format) => {
 })
 
 // start connection to Icecast server
-icecast.get(config.icecast_url, (res) => {
+icecast.get(config.input.url, (res) => {
 
     // receiving data from Icecast event
     res.on("data", (data) => {
@@ -59,7 +60,14 @@ function sendData(data){
     clients.forEach((client) => {
         client.write(data)
     })
+
+    if (config.export.file) {
+        fs.appendFile(config.file, data, function (err) {
+            data = null
+            if (err) throw err
+        })
+    }
 }
 
-server.listen("8000", "127.0.0.1")
-console.log("Server running at http://127.0.0.1:8000")
+server.listen(config.server.port, config.server.ip)
+console.log(`Server running at http://${config.server.ip}:${config.server.port}`)
