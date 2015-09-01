@@ -9,6 +9,16 @@
   },
   "author": "pteich",
   "license": "MIT",
+  "keywords": [
+    "icecast",
+    "streaming",
+    "audio",
+    "es2015",
+    "es6",
+    "shoutcast",
+    "proxy",
+    "mp3"
+  ],
   "devDependencies": {
     "icy": "^2.0.0",
     "lame": "^1.2.2",
