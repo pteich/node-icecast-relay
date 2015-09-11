@@ -73,7 +73,7 @@ function sendData(data) {
         }
     })
 
-    if (config.export.file != false) {
+    if (config.export.file !== false) {
         fs.appendFile(config.export.file, data, (err) => {
             data = null // set data to null to prevent memory leaks
             if (err) throw err

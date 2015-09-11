@@ -6,9 +6,9 @@ The incoming audio data is piped through Lame so you can transcode it if needed.
 You can connect to the output of this script (default http://localhost:8000) with any music player capable of streaming data or any web browser that can play `audio/mp3` files.
 
 
-This script uses ES2015/ES6 together with Babel (https://babeljs.io). 
+This script uses ES2015/ES6 together with Babel (https://babeljs.io).
 
-[![Dependency Status](https://gemnasium.com/pteich/node-icecast-proxy.svg)](https://gemnasium.com/pteich/node-icecast-proxy) [![Circle CI](https://circleci.com/gh/pteich/node-icecast-proxy.svg?style=svg)](https://circleci.com/gh/pteich/node-icecast-proxy)
+[![Code Climate](https://codeclimate.com/github/pteich/node-icecast-proxy/badges/gpa.svg)](https://codeclimate.com/github/pteich/node-icecast-proxy) [![Dependency Status](https://gemnasium.com/pteich/node-icecast-proxy.svg)](https://gemnasium.com/pteich/node-icecast-proxy) [![Circle CI](https://circleci.com/gh/pteich/node-icecast-proxy.svg?style=svg)](https://circleci.com/gh/pteich/node-icecast-proxy)
 
 
 ## Installation
