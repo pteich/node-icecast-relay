@@ -8,7 +8,7 @@ You can connect to the output of this script (default http://localhost:8000) wit
 
 This script uses ES2015/ES6 together with Babel (https://babeljs.io).
 
-[![Code Climate](https://codeclimate.com/github/pteich/node-icecast-proxy/badges/gpa.svg)](https://codeclimate.com/github/pteich/node-icecast-proxy) [![Dependency Status](https://gemnasium.com/pteich/node-icecast-relay.svg)](https://gemnasium.com/pteich/node-icecast-relay) [![Circle CI](https://circleci.com/gh/pteich/node-icecast-proxy.svg?style=svg)](https://circleci.com/gh/pteich/node-icecast-proxy)
+[![Code Climate](https://codeclimate.com/github/pteich/node-icecast-proxy/badges/gpa.svg)](https://codeclimate.com/github/pteich/node-icecast-proxy) [![Dependency Status](https://gemnasium.com/pteich/node-icecast-relay.svg)](https://gemnasium.com/pteich/node-icecast-relay) [![Circle CI](https://circleci.com/gh/pteich/node-icecast-proxy.svg?style=svg)](https://circleci.com/gh/pteich/node-icecast-proxy) [![Build Status](https://semaphoreci.com/api/v1/projects/c175d2b7-851b-452d-9c7f-1e92d22004ff/583477/badge.svg)](https://semaphoreci.com/pteich/node-icecast-relay)
 
 
 ## Installation
