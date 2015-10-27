@@ -1,4 +1,4 @@
-# Proof-of-concept Icecast proxy for NodeJS (ES2015/ES6 style)
+# Proof-of-concept Icecast relay server for NodeJS (ES2015/ES6 style)
 
 Simple but working proxy that connects to an existing Icecast (or Shoutcast) stream and redistributes data to connected clients (mp3 only at the moment).
 The incoming audio data is piped through Lame so you can transcode it if needed. The output is optionally saved into a file.
