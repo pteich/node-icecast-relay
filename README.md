@@ -1,3 +1,6 @@
+If you need a lightweight Icecast proxy without transcoding you could give my Node Icecast Proxy a try: https://github.com/pteich/node-icecast-proxy
+
+
 # Proof-of-concept Icecast relay server for NodeJS (ES2015/ES6 style)
 
 Simple but working proxy that connects to an existing Icecast (or Shoutcast) stream and redistributes data to connected clients (mp3 only at the moment).
